@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Commodity List</title>
+</head>
+<body>
+    <h1>Commodity List</h1>
+    <ul>
+        {% for commodity in commodities %}
+            <li>
+                <!-- <h2>{{ commodity.name }}</h2> -->
+                <a href="{{ commodity.get_absolute_url }}">{{ commodity.name }}</a>
+                <p>Month Sell: {{ commodity.month_sell }}</p>
+                <!-- <img src="{{ commodity.photo_path.url }}" alt="{{ commodity.name }} Photo"> -->
+                <p>Seller: {{ commodity.seller }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

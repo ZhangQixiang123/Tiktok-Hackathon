@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Commodity List</title>
+</head>
+<body>
+    <h1>Commodity Detail</h1>
+    <ul>
+            <li>
+                <h2>{{ commodity.name }}</h2>
+                <p>Month Sell: {{ commodity.month_sell }}</p>
+                <!-- <img src="{{ commodity.photo_path.url }}" alt="{{ commodity.name }} Photo"> -->
+                <p>Seller: {{ commodity.seller }}</p>
+                <p>Followed Like: {{ commodity.rec_from_followed }}</p>
+                <p>Friend Like: {{ commodity.rec_from_friend }}</p>
+            </li>
+    </ul>
+</body>
+</html>

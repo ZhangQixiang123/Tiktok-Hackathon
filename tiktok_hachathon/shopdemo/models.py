@@ -39,8 +39,8 @@ class Commodity(models.Model):
     month_sell = models.IntegerField()
     seller = models.CharField(max_length=200)
     rec_from_followed = models.IntegerField()
-    rec_from_followed = models.IntegerField()
-    video = models.ManyToManyField(Video, help_text='Select a genre for this book')
+    rec_from_friend = models.IntegerField()
+    video = models.ManyToManyField(Video, help_text='Select a genre for this book', null = False)
 
     # Metadata
     class Meta:
