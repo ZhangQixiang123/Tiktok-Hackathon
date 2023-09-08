@@ -1,0 +1,12 @@
+body {
+    font-size: 15px;
+    background: #f4f4f4;
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 15px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
