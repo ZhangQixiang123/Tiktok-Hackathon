@@ -13,6 +13,15 @@
                 <p>Seller: {{ commodity.seller }}</p>
                 <p>Followed Like: {{ commodity.rec_from_followed }}</p>
                 <p>Friend Like: {{ commodity.rec_from_friend }}</p>
+                {% for video in commodity.video.all %}
+                    <li>
+                        <video width="320" height="240" controls>
+                            <source src="{{ video.path.url }}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p>{{ video.name }}</p>
+                    </li>
+                {% endfor %}
             </li>
     </ul>
 </body>
