@@ -1,0 +1,7 @@
+<!-- templates/videoupload/upload_video.html -->
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">上传视频</button>
+</form>

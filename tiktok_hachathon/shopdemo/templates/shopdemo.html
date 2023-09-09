@@ -2,6 +2,12 @@
 <html>
 <head>
     <title>Commodity List</title>
+    <style>
+        .commodity-photo {
+            max-width: 300px; /* Set the maximum width */
+            max-height: 200px; /* Set the maximum height */
+        }
+    </style>
 </head>
 <body>
     <h1>Commodity List</h1>
@@ -9,12 +15,15 @@
         {% for commodity in commodities %}
             <li>
                 <!-- <h2>{{ commodity.name }}</h2> -->
-                <a href="{{ commodity.get_absolute_url }}">{{ commodity.name }}</a>
+                <a href="{{ commodity.get_absolute_url }}">
+                    <img src="{{ commodity.photo.url }}" alt="{{ commodity.name }} Photo" class="commodity-photo">
+                </a>
                 <p>Month Sell: {{ commodity.month_sell }}</p>
-                <!-- <img src="{{ commodity.photo_path.url }}" alt="{{ commodity.name }} Photo"> -->
                 <p>Seller: {{ commodity.seller }}</p>
             </li>
         {% endfor %}
     </ul>
 </body>
 </html>
+
+

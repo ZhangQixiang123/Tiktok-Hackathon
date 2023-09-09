@@ -9,8 +9,8 @@ class Video(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, 
                           help_text='Unique ID for this video')
     name = models.CharField(max_length=200)
-    photo = models.CharField(max_length=255)
-    path = models.CharField(max_length=255)
+    # photo = models.ImageField(upload_to='images/')
+    path = models.FileField(upload_to='videos/')
     tag = models.CharField(max_length=200)
 
     # Metadata
@@ -35,7 +35,7 @@ class Commodity(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, 
                           help_text='Unique ID for this commodity')
     name = models.CharField(max_length=200)
-    photo = models.CharField(max_length=255)
+    photo = models.ImageField(upload_to='images/')
     month_sell = models.IntegerField()
     seller = models.CharField(max_length=200)
     rec_from_followed = models.IntegerField()

@@ -23,5 +23,26 @@ class CommocityDetailView(generic.DetailView):
     template_name = 'commodity.html'
     context_object_name = 'commodity'
 
+from django.shortcuts import render, redirect
+from .forms import VideoForm
+
+def upload_video(request):
+    if request.method == 'POST':
+        form = VideoForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('video_list')
+    else:
+        form = VideoForm()
+    return render(request, 'videoupload/upload_video.html', {'form': form})
+
+
+# videoupload/views.py
+from .models import Video
+
+def video_list(request):
+    videos = Video.objects.all()
+    return render(request, 'video_list.html', {'videos': videos})
+
 
 

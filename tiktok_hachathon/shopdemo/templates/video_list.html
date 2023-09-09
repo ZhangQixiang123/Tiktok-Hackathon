@@ -1,0 +1,9 @@
+<!-- templates/videoupload/video_list.html -->
+
+{% for video in videos %}
+<video width="320" height="240" controls>
+    <source src="{{ video.path.url }}" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+<p>{{ video.name }}</p>
+{% endfor %}

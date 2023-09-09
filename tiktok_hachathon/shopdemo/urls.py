@@ -14,5 +14,8 @@ urlpatterns += [
 
     path('shopdemo/', ShopView.as_view(), name='commodity_list'),
     path('shopdemo/(?P<pk>[0-9a-f-]+)/$', CommocityDetailView.as_view(), name='commodity_detail'),
+
+    path('upload/', views.upload_video, name='upload_video'),
+    path('list/', views.video_list, name='video_list'),
 ]
 
