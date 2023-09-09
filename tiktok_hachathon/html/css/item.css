@@ -30,15 +30,23 @@ body{
     height:260px;
 }
 
-.num_friends{
+.videos_recommended{
     margin-left: 10px;
 }
 
-.num_people{
+.videos_by_friends{
     margin-left: 10px;
 }
 
-.nav img{
+.videos .video_item{
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ddd;
+    margin: 8px 2px;
+    cursor: pointer;
+}
+
+.videos .video_fun{
     width: 50px;
     height: 50px;
     border: 1px solid #ddd;
